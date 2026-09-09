@@ -1,12 +1,17 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdminRoomPage {
 
     private WebDriver driver;
+    private WebDriverWait wait;
 
     // Room form locators
     private By roomName = By.id("roomName");
@@ -25,65 +30,90 @@ public class AdminRoomPage {
     // Create button
     private By createRoomButton = By.id("createRoom");
 
-    // Constructor
     public AdminRoomPage(WebDriver driver) {
+
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // Enter room number
     public void enterRoomNumber(String roomNumber) {
-        driver.findElement(roomName).sendKeys(roomNumber);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(roomName))
+                .sendKeys(roomNumber);
     }
 
-    // Select room type
     public void selectRoomType(String type) {
-        Select select = new Select(driver.findElement(roomType));
+
+        Select select = new Select(
+                wait.until(ExpectedConditions.visibilityOfElementLocated(roomType))
+        );
+
         select.selectByVisibleText(type);
     }
 
-    // Select accessibility
     public void selectAccessible(String value) {
-        Select select = new Select(driver.findElement(accessible));
+
+        Select select = new Select(
+                wait.until(ExpectedConditions.visibilityOfElementLocated(accessible))
+        );
+
         select.selectByVisibleText(value);
     }
 
-    // Enter room price
     public void enterRoomPrice(String price) {
-        driver.findElement(roomPrice).sendKeys(price);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(roomPrice))
+                .sendKeys(price);
     }
 
-    // Select WiFi
     public void selectWiFi() {
-        driver.findElement(wifiCheckbox).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(wifiCheckbox))
+                .click();
     }
 
-    // Select TV
     public void selectTV() {
-        driver.findElement(tvCheckbox).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(tvCheckbox))
+                .click();
     }
 
-    // Select Radio
     public void selectRadio() {
-        driver.findElement(radioCheckbox).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(radioCheckbox))
+                .click();
     }
 
-    // Select Refreshments
     public void selectRefreshments() {
-        driver.findElement(refreshCheckbox).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(refreshCheckbox))
+                .click();
     }
 
-    // Select Safe
     public void selectSafe() {
-        driver.findElement(safeCheckbox).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(safeCheckbox))
+                .click();
     }
 
-    // Select Views
     public void selectViews() {
-        driver.findElement(viewsCheckbox).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(viewsCheckbox))
+                .click();
     }
 
-    // Create room
     public void clickCreateRoom() {
-        driver.findElement(createRoomButton).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(createRoomButton))
+                .click();
+    }
+
+    public boolean isRoomDisplayed(String roomNumber) {
+
+        By room = By.id("roomName" + roomNumber);
+
+        return wait.until(
+                ExpectedConditions.visibilityOfElementLocated(room)
+        ).isDisplayed();
     }
 }
