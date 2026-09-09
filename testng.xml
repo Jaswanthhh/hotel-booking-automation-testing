@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="HotelBookingAutomationSuite" verbose="1">
+    <test name="CustomerProfileTests">
+        <classes>
+            <class name="com.hotelbooking.CustomerProfileUpdateTest" />
+            <class name="com.hotelbooking.ContactTest" />
+        </classes>
+    </test>
+</suite>
