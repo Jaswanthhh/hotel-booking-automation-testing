@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="BookingDateAvailabilitySuite">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="HotelBookingAutomationSuite" verbose="1">
     <test name="BookingDateTests">
         <classes>
             <class name="tests.BookingDateTest"/>
+        </classes>
+    </test>
+    <test name="CustomerProfileTests">
+        <classes>
+            <class name="com.hotelbooking.CustomerProfileUpdateTest" />
+            <class name="com.hotelbooking.ContactTest" />
         </classes>
     </test>
 </suite>
