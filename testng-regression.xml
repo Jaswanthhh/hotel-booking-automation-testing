@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression">
+
+    <test name="Critical Tests">
+        <classes>
+            <class name="com.hotelbooking.ContactTest"/>
+        </classes>
+    </test>
+
+</suite>
