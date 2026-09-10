@@ -1,133 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-10T12:02:20 IST" name="Hotel Booking Automation Suite" finished-at="2026-09-10T12:03:04 IST" duration-ms="43569">
+  <suite started-at="2026-09-09T14:16:47 IST" name="BookingDateAvailabilitySuite" finished-at="2026-09-09T14:17:42 IST" duration-ms="55603">
     <groups>
     </groups>
-    <test started-at="2026-09-10T12:02:20 IST" name="Home Page Tests" finished-at="2026-09-10T12:03:04 IST" duration-ms="43569">
-      <class name="tests.HomeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:20 IST" name="setUp" finished-at="2026-09-10T12:02:24 IST" duration-ms="3948" status="PASS">
+    <test started-at="2026-09-09T14:16:47 IST" name="BookingDateTests" finished-at="2026-09-09T14:17:42 IST" duration-ms="55603">
+      <class name="tests.BookingDateTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:47 IST" name="setUp" finished-at="2026-09-09T14:16:51 IST" duration-ms="4445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyContactNavigation()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:24 IST" name="verifyContactNavigation" finished-at="2026-09-10T12:02:25 IST" duration-ms="1003" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:51 IST" name="initPage" finished-at="2026-09-09T14:16:51 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyContactNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:25 IST" name="tearDown" finished-at="2026-09-10T12:02:26 IST" duration-ms="620" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="availableRoomShown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:51 IST" name="availableRoomShown" finished-at="2026-09-09T14:16:53 IST" duration-ms="2224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- availableRoomShown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:54 IST" name="tearDown" finished-at="2026-09-09T14:16:54 IST" duration-ms="465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:26 IST" name="setUp" finished-at="2026-09-10T12:02:29 IST" duration-ms="3151" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:54 IST" name="setUp" finished-at="2026-09-09T14:16:57 IST" duration-ms="2839" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyFooter()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:29 IST" name="verifyFooter" finished-at="2026-09-10T12:02:30 IST" duration-ms="677" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:57 IST" name="initPage" finished-at="2026-09-09T14:16:57 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyFooter -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:30 IST" name="tearDown" finished-at="2026-09-10T12:02:30 IST" duration-ms="442" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="boundaryDateCase()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:57 IST" name="boundaryDateCase" finished-at="2026-09-09T14:16:59 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- boundaryDateCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:16:59 IST" name="tearDown" finished-at="2026-09-09T14:17:00 IST" duration-ms="701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:30 IST" name="setUp" finished-at="2026-09-10T12:02:33 IST" duration-ms="2856" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:00 IST" name="setUp" finished-at="2026-09-09T14:17:03 IST" duration-ms="3344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyImportantImages()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:33 IST" name="verifyImportantImages" finished-at="2026-09-10T12:02:34 IST" duration-ms="641" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:03 IST" name="initPage" finished-at="2026-09-09T14:17:03 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyImportantImages -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:34 IST" name="tearDown" finished-at="2026-09-10T12:02:34 IST" duration-ms="414" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="checkOutBeforeCheckIn()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:03 IST" name="checkOutBeforeCheckIn" finished-at="2026-09-09T14:17:05 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOutBeforeCheckIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:05 IST" name="tearDown" finished-at="2026-09-09T14:17:05 IST" duration-ms="413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:34 IST" name="setUp" finished-at="2026-09-10T12:02:37 IST" duration-ms="2696" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:05 IST" name="setUp" finished-at="2026-09-09T14:17:10 IST" duration-ms="4496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyImportantLinks()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:37 IST" name="verifyImportantLinks" finished-at="2026-09-10T12:02:38 IST" duration-ms="922" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:10 IST" name="initPage" finished-at="2026-09-09T14:17:10 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyImportantLinks -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:38 IST" name="tearDown" finished-at="2026-09-10T12:02:38 IST" duration-ms="475" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="differentDateRangeAccepted()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:10 IST" name="differentDateRangeAccepted" finished-at="2026-09-09T14:17:12 IST" duration-ms="2524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- differentDateRangeAccepted -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:12 IST" name="tearDown" finished-at="2026-09-09T14:17:13 IST" duration-ms="340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:38 IST" name="setUp" finished-at="2026-09-10T12:02:42 IST" duration-ms="3974" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:13 IST" name="setUp" finished-at="2026-09-09T14:17:17 IST" duration-ms="4407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogo()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:42 IST" name="verifyLogo" finished-at="2026-09-10T12:02:43 IST" duration-ms="1243" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:17 IST" name="initPage" finished-at="2026-09-09T14:17:17 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:43 IST" name="tearDown" finished-at="2026-09-10T12:02:44 IST" duration-ms="466" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="multipleNightBooking()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:17 IST" name="multipleNightBooking" finished-at="2026-09-09T14:17:18 IST" duration-ms="1381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multipleNightBooking -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:18 IST" name="tearDown" finished-at="2026-09-09T14:17:19 IST" duration-ms="355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:44 IST" name="setUp" finished-at="2026-09-10T12:02:46 IST" duration-ms="2468" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:19 IST" name="setUp" finished-at="2026-09-09T14:17:23 IST" duration-ms="4389" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyNavigation()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:46 IST" name="verifyNavigation" finished-at="2026-09-10T12:02:47 IST" duration-ms="676" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:23 IST" name="initPage" finished-at="2026-09-09T14:17:23 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:47 IST" name="tearDown" finished-at="2026-09-10T12:02:47 IST" duration-ms="396" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="pastDateRejected()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:23 IST" name="pastDateRejected" finished-at="2026-09-09T14:17:25 IST" duration-ms="2135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pastDateRejected -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:25 IST" name="tearDown" finished-at="2026-09-09T14:17:26 IST" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:47 IST" name="setUp" finished-at="2026-09-10T12:02:50 IST" duration-ms="2372" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:26 IST" name="setUp" finished-at="2026-09-09T14:17:29 IST" duration-ms="3121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyPageLoads()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:50 IST" name="verifyPageLoads" finished-at="2026-09-10T12:02:50 IST" duration-ms="25" status="PASS">
+        <test-method signature="sameCheckInCheckOutDate()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:29 IST" name="sameCheckInCheckOutDate" finished-at="2026-09-09T14:17:31 IST" duration-ms="1961" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPageLoads -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:50 IST" name="tearDown" finished-at="2026-09-10T12:02:50 IST" duration-ms="313" status="PASS">
+        </test-method> <!-- sameCheckInCheckOutDate -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:29 IST" name="initPage" finished-at="2026-09-09T14:17:29 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:31 IST" name="tearDown" finished-at="2026-09-09T14:17:31 IST" duration-ms="429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:50 IST" name="setUp" finished-at="2026-09-10T12:02:53 IST" duration-ms="2615" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:31 IST" name="setUp" finished-at="2026-09-09T14:17:35 IST" duration-ms="3168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRoomSection()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:53 IST" name="verifyRoomSection" finished-at="2026-09-10T12:02:53 IST" duration-ms="608" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:35 IST" name="initPage" finished-at="2026-09-09T14:17:35 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRoomSection -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:53 IST" name="tearDown" finished-at="2026-09-10T12:02:54 IST" duration-ms="403" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="unavailableRoomShown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:35 IST" name="unavailableRoomShown" finished-at="2026-09-09T14:17:37 IST" duration-ms="1975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unavailableRoomShown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:37 IST" name="tearDown" finished-at="2026-09-09T14:17:37 IST" duration-ms="502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:54 IST" name="setUp" finished-at="2026-09-10T12:02:58 IST" duration-ms="4576" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:37 IST" name="setUp" finished-at="2026-09-09T14:17:40 IST" duration-ms="2823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRoomsNavigation()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:58 IST" name="verifyRoomsNavigation" finished-at="2026-09-10T12:02:59 IST" duration-ms="1269" status="PASS">
+        <test-method signature="validDateSelection()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:40 IST" name="validDateSelection" finished-at="2026-09-09T14:17:42 IST" duration-ms="2083" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRoomsNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:02:59 IST" name="tearDown" finished-at="2026-09-10T12:03:00 IST" duration-ms="422" status="PASS">
+        </test-method> <!-- validDateSelection -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:40 IST" name="initPage" finished-at="2026-09-09T14:17:40 IST" depends-on-methods="tests.BaseTest.setUp" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:03:00 IST" name="setUp" finished-at="2026-09-10T12:03:02 IST" duration-ms="2233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyViewportBehavior()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:03:02 IST" name="verifyViewportBehavior" finished-at="2026-09-10T12:03:03 IST" duration-ms="1091" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyViewportBehavior -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomeTest@7219ec67]" started-at="2026-09-10T12:03:03 IST" name="tearDown" finished-at="2026-09-10T12:03:04 IST" duration-ms="496" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BookingDateTest@65d6b83b]" started-at="2026-09-09T14:17:42 IST" name="tearDown" finished-at="2026-09-09T14:17:42 IST" duration-ms="413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.HomeTest -->
-    </test> <!-- Home Page Tests -->
-  </suite> <!-- Hotel Booking Automation Suite -->
+      </class> <!-- tests.BookingDateTest -->
+    </test> <!-- BookingDateTests -->
+  </suite> <!-- BookingDateAvailabilitySuite -->
 </testng-results>
