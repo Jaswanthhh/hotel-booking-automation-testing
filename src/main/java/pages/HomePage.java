@@ -15,28 +15,88 @@ public class HomePage {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
-    private static final String URL = "https://automationintesting.online/";
 
-    private final By navigationBar = By.cssSelector("nav.navbar");
-    private final By logo = By.cssSelector("a.navbar-brand");
-    private final By roomsLink = By.cssSelector("a.nav-link[href='/#rooms']");
-    private final By contactLink = By.cssSelector("a.nav-link[href='/#contact']");
-    private final By homeLink = By.cssSelector("a.navbar-brand");
-    private final By roomsSection = By.id("rooms");
-    private final By contactSection = By.id("contact");
-    private final By footer = By.tagName("footer");
-    private final By images = By.tagName("img");
-    private final By footerLinks = By.cssSelector("footer a");
+    private static final String URL =
+            "https://automationintesting.online/";
+
+    // -----------------------------
+    // Locators
+    // -----------------------------
+
+    private final By navigationBar =
+            By.cssSelector("nav.navbar");
+
+    private final By logo =
+            By.cssSelector("a.navbar-brand");
+
+    /*
+     * Use text instead of the exact href.
+     * This is more robust if the website changes
+     * /#rooms to another equivalent URL format.
+     */
+    private final By roomsLink =
+            By.xpath("//nav//a[contains(normalize-space(), 'Rooms')]");
+
+    private final By contactLink =
+            By.xpath("//nav//a[contains(normalize-space(), 'Contact')]");
+
+    private final By homeLink =
+            By.cssSelector("a.navbar-brand");
+
+    private final By roomsSection =
+            By.id("rooms");
+
+    private final By contactSection =
+            By.id("contact");
+
+    private final By footer =
+            By.tagName("footer");
+
+    private final By images =
+            By.tagName("img");
+
+    private final By footerLinks =
+            By.cssSelector("footer a");
+
+
+    // -----------------------------
+    // Constructor
+    // -----------------------------
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        this.wait = new WebDriverWait(
+                driver,
+                Duration.ofSeconds(15)
+        );
     }
 
+
+    // -----------------------------
+    // Open Website
+    // -----------------------------
+
     public void openWebsite() {
+
         driver.get(URL);
-        wait.until(driver -> driver.getCurrentUrl().contains("automationintesting.online"));
+
+        wait.until(driver ->
+                driver.getCurrentUrl()
+                        .contains("automationintesting.online")
+        );
+
+        // Wait until the navigation is visible
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        navigationBar
+                )
+        );
     }
+
+
+    // -----------------------------
+    // Page Information
+    // -----------------------------
 
     public String getPageTitle() {
         return driver.getTitle();
@@ -45,6 +105,11 @@ public class HomePage {
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
+
+
+    // -----------------------------
+    // Navigation
+    // -----------------------------
 
     public boolean isNavigationDisplayed() {
         return isDisplayed(navigationBar);
@@ -62,29 +127,106 @@ public class HomePage {
         return isDisplayed(contactLink);
     }
 
+
+    // -----------------------------
+    // Navigation Clicks
+    // -----------------------------
+
     public void clickHome() {
-        clickable(homeLink).click();
+
+        WebElement home = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        homeLink
+                )
+        );
+
+        scrollElementIntoView(home);
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(home)
+        );
+
+        home.click();
     }
+
 
     public void clickRooms() {
-        clickable(roomsLink).click();
+
+        WebElement rooms = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        roomsLink
+                )
+        );
+
+        /*
+         * Move the Rooms link to the center of the viewport
+         * before clicking.
+         *
+         * This helps avoid sticky headers or other elements
+         * intercepting the click.
+         */
+        scrollElementIntoView(rooms);
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(rooms)
+        );
+
+        rooms.click();
     }
 
+
     public void clickContact() {
-        clickable(contactLink).click();
+
+        WebElement contact = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        contactLink
+                )
+        );
+
+        /*
+         * Move Contact link to the center of the viewport
+         * before clicking.
+         */
+        scrollElementIntoView(contact);
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(contact)
+        );
+
+        contact.click();
     }
+
+
+    // -----------------------------
+    // Logo
+    // -----------------------------
 
     public boolean isLogoDisplayed() {
         return isDisplayed(logo);
     }
 
+
+    // -----------------------------
+    // Rooms Section
+    // -----------------------------
+
     public boolean isRoomsSectionDisplayed() {
         return isDisplayed(roomsSection);
     }
 
+
+    // -----------------------------
+    // Contact Section
+    // -----------------------------
+
     public boolean isContactSectionDisplayed() {
         return isDisplayed(contactSection);
     }
+
+
+    // -----------------------------
+    // Images
+    // -----------------------------
 
     public List<WebElement> getImages() {
         return driver.findElements(images);
@@ -94,6 +236,11 @@ public class HomePage {
         return getImages().size();
     }
 
+
+    // -----------------------------
+    // Footer
+    // -----------------------------
+
     public boolean isFooterDisplayed() {
         return isDisplayed(footer);
     }
@@ -102,30 +249,91 @@ public class HomePage {
         return driver.findElements(footerLinks);
     }
 
+
     public void scrollToFooter() {
-        WebElement footerElement = wait.until(ExpectedConditions.presenceOfElementLocated(footer));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", footerElement);
+
+        WebElement footerElement = wait.until(
+                ExpectedConditions.presenceOfElementLocated(
+                        footer
+                )
+        );
+
+        scrollElementIntoView(footerElement);
     }
+
+
+    // -----------------------------
+    // Scroll to Rooms
+    // -----------------------------
 
     public void scrollToRooms() {
-        WebElement roomsElement = wait.until(ExpectedConditions.presenceOfElementLocated(roomsSection));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", roomsElement);
+
+        WebElement roomsElement = wait.until(
+                ExpectedConditions.presenceOfElementLocated(
+                        roomsSection
+                )
+        );
+
+        scrollElementIntoView(roomsElement);
     }
+
+
+    // -----------------------------
+    // Scroll to Contact
+    // -----------------------------
 
     public void scrollToContact() {
-        WebElement contactElement = wait.until(ExpectedConditions.presenceOfElementLocated(contactSection));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", contactElement);
+
+        WebElement contactElement = wait.until(
+                ExpectedConditions.presenceOfElementLocated(
+                        contactSection
+                )
+        );
+
+        scrollElementIntoView(contactElement);
     }
 
-    private boolean isDisplayed(By locator) {
+
+    // -----------------------------
+    // Helper - Scroll Element
+    // -----------------------------
+
+    private void scrollElementIntoView(WebElement element) {
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});",
+                element
+        );
+
+        /*
+         * Small pause allows the browser to finish scrolling
+         * and any sticky navigation animation to settle.
+         */
         try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
-        } catch (TimeoutException e) {
-            return false;
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 
-    private WebElement clickable(By locator) {
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+    // -----------------------------
+    // Helper - Check Displayed
+    // -----------------------------
+
+    private boolean isDisplayed(By locator) {
+
+        try {
+
+            return wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(
+                            locator
+                    )
+            ).isDisplayed();
+
+        } catch (TimeoutException e) {
+
+            return false;
+        }
     }
 }

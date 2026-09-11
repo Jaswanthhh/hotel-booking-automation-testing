@@ -1,30 +1,20 @@
-package com.hotelbooking;
+package tests;
 
+import com.hotelbooking.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.ProfilePage;
 
 import java.time.Duration;
 
-public class CustomerProfileUpdateTest {
-    private WebDriver driver;
+public class CustomerProfileUpdateTest extends BaseTest{
     private ProfilePage profilePage;
-
     @BeforeMethod
-    public void setUp() {
-        driver = DriverFactory.createDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.manage().window().maximize();
+    public void initializePage() {
         profilePage = new ProfilePage(driver);
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
 
     @Test(description = "Successfully updates customer profile fields with valid data")
