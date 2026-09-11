@@ -1,27 +1,18 @@
-package com.hotelbooking;
+package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.ContactPage;
 
-public class ContactTest {
-
-    private WebDriver driver;
+public class ContactTest extends BaseTest {
     private ContactPage contactPage;
-
-    private final String URL = "https://automationintesting.online/";
-
 
     // Setup browser before every test
     @BeforeMethod
-    public void setUp() {
-
-        driver = DriverFactory.createDriver();
-
-        driver.get(URL);
-
+    public void initializepage() {
+        driver.get(BASE_URL);
         contactPage = new ContactPage(driver);
     }
 
@@ -241,15 +232,5 @@ public class ContactTest {
                         || contactPage.isValidationMessageDisplayed(),
                 "No success or validation message was displayed"
         );
-    }
-
-
-    // Close browser after every test
-    @AfterMethod
-    public void tearDown() {
-
-        if (driver != null) {
-            driver.quit();
-        }
     }
 }

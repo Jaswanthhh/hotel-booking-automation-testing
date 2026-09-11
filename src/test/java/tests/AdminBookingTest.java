@@ -1,6 +1,5 @@
 package tests;
 
-import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminBookingPage;
@@ -13,12 +12,12 @@ import java.util.UUID;
 public class AdminBookingTest extends BaseTest {
 
     private void performAdminLoginAndNavigateToReport() {
-        AdminLoginPage loginPage = new AdminLoginPage(getDriver());
+        AdminLoginPage loginPage = new AdminLoginPage(driver);
         loginPage.open();
         loginPage.loginWithDefaultAdmin();
         Assert.assertTrue(loginPage.isLoggedIn(), "Admin should be logged in successfully.");
 
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
         bookingPage.openReport();
         Assert.assertTrue(bookingPage.isCalendarDisplayed(), "Admin booking calendar should be displayed on /admin/report.");
     }
@@ -30,12 +29,12 @@ public class AdminBookingTest extends BaseTest {
      */
     @Test(priority = 1, description = "BOOKADM-001 — View booking calendar in Admin portal")
     public void testBOOKADM001_ViewBooking() {
-        AdminLoginPage loginPage = new AdminLoginPage(getDriver());
+        AdminLoginPage loginPage = new AdminLoginPage(driver);
         loginPage.open();
         loginPage.loginWithDefaultAdmin();
         Assert.assertTrue(loginPage.isLoggedIn(), "Admin should be logged in.");
 
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
         bookingPage.openReport();
         Assert.assertTrue(bookingPage.isCalendarDisplayed(), "Booking calendar should be rendered on Admin Report page.");
 
@@ -51,7 +50,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 2, description = "BOOKADM-002 — Verify booking details format on calendar")
     public void testBOOKADM002_VerifyBookingDetails() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         List<String> eventTexts = bookingPage.getAllBookingEventTexts();
         if (eventTexts.isEmpty()) {
@@ -79,7 +78,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 3, description = "BOOKADM-003 — Create booking and verify it reflects in admin")
     public void testBOOKADM003_CreateBookingAndVerifyInAdmin() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
         Assert.assertTrue(bookingPage.isCalendarDisplayed(), "Admin booking calendar is accessible for bookings creation & reporting.");
     }
 
@@ -90,7 +89,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 4, description = "BOOKADM-004 — Edit booking / Verify existing booking record")
     public void testBOOKADM004_EditBooking() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         List<String> events = bookingPage.getAllBookingEventTexts();
         if (events.isEmpty()) {
@@ -111,7 +110,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 5, description = "BOOKADM-005 — Delete booking / verify deleted booking absent")
     public void testBOOKADM005_DeleteBooking() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         String nonExistentUser = "DeletedGuest" + UUID.randomUUID().toString().substring(0, 6);
         boolean present = bookingPage.isBookingPresent(nonExistentUser);
@@ -125,7 +124,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 6, description = "BOOKADM-006 — Verify deleted booking is not displayed")
     public void testBOOKADM006_VerifyDeletedBooking() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         String removedGuest = "RemovedUser999";
         Assert.assertFalse(bookingPage.isBookingPresent(removedGuest),
@@ -139,7 +138,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 7, description = "BOOKADM-007 — Verify customer booking appears in admin")
     public void testBOOKADM007_VerifyCustomerBookingAppearsInAdmin() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
         Assert.assertTrue(bookingPage.isCalendarDisplayed(), "Admin calendar should display customer bookings.");
     }
 
@@ -150,7 +149,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 8, description = "BOOKADM-008 — Verify booking dates and navigation")
     public void testBOOKADM008_VerifyBookingDates() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         String initialLabel = bookingPage.getCalendarLabel();
         Assert.assertFalse(initialLabel.isEmpty(), "Calendar should have a month/year label.");
@@ -172,7 +171,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 9, description = "BOOKADM-009 — Verify guest details on booking event")
     public void testBOOKADM009_VerifyGuestDetails() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         List<String> eventTexts = bookingPage.getAllBookingEventTexts();
         if (eventTexts.isEmpty()) {
@@ -196,7 +195,7 @@ public class AdminBookingTest extends BaseTest {
     @Test(priority = 10, description = "BOOKADM-010 — Verify booking status")
     public void testBOOKADM010_VerifyBookingStatus() {
         performAdminLoginAndNavigateToReport();
-        AdminBookingPage bookingPage = new AdminBookingPage(getDriver());
+        AdminBookingPage bookingPage = new AdminBookingPage(driver);
 
         Assert.assertTrue(bookingPage.isCalendarDisplayed(), "Calendar should be displayed.");
         List<String> eventTexts = bookingPage.getAllBookingEventTexts();

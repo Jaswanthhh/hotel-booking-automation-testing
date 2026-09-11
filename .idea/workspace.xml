@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a27d5-839d-4502-88f9-c7c4308b15f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Regression/BrowserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Regression/RegressionSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng-regression.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Regression/testng-regression-chrome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Regression/BrowserFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Regression/RegressionSuite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hotelbooking/ContactPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ContactPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hotelbooking/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hotelbooking/CustomerProfileUpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CustomerProfileUpdateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hotelbooking/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/doubleRoomBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DoubleRoomBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RoomsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RoomsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/singleRoomBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SingleRoomBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/suiteBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SuiteBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AdminBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AdminBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RoomsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RoomsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/HomeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/HomeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng-regression.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +42,65 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0001578303073404" />
+      <entry key="S5" value="1.0456812534250297" />
+      <entry key="S10" value="1.3022441910021592" />
+      <entry key="S30" value="2.06530624887289" />
+      <entry key="S60" value="2.4655753336135993" />
+      <entry key="M2" value="2.8166241975223425" />
+      <entry key="M5" value="3.513219744863625" />
+      <entry key="M10" value="4.366080281709776" />
+      <entry key="M15" value="5.3585020421840985" />
+      <entry key="M30" value="8.83468568019271" />
+      <entry key="H1" value="13.969988791194927" />
+      <entry key="H2" value="18.691497177696917" />
+      <entry key="H4" value="21.94353210409622" />
+      <entry key="D1" value="25.259722717359093" />
+      <entry key="W1" value="25.892551872360347" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.4715235355074672E-88" />
+      <entry key="S5" value="7.697853800733139E-36" />
+      <entry key="S10" value="3.292435738596372E-18" />
+      <entry key="S30" value="2.22826683072066E-6" />
+      <entry key="S60" value="0.00209396332547632" />
+      <entry key="M2" value="0.06458141454167253" />
+      <entry key="M5" value="0.5094882099648862" />
+      <entry key="M10" value="1.0862331074988418" />
+      <entry key="M15" value="1.547755797694369" />
+      <entry key="M30" value="2.7736869467515493" />
+      <entry key="H1" value="4.385719010047946" />
+      <entry key="H2" value="5.81759164282394" />
+      <entry key="H4" value="6.792067995997268" />
+      <entry key="D1" value="7.780036790359688" />
+      <entry key="W1" value="7.968084556724934" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9201876506248751" />
+      <entry key="MS500" value="0.9835020740262483" />
+      <entry key="S2" value="0.9959982802804767" />
+      <entry key="S5" value="1.0429382879338132" />
+      <entry key="S10" value="1.2978336726838953" />
+      <entry key="S30" value="2.0608225839203107" />
+      <entry key="S60" value="2.4644236898327088" />
+      <entry key="M2" value="2.8768882743830853" />
+      <entry key="M5" value="4.014945004132869" />
+      <entry key="M10" value="5.444790586805024" />
+      <entry key="M15" value="6.899140682428413" />
+      <entry key="M30" value="11.601488161838114" />
+      <entry key="H1" value="18.349822216557804" />
+      <entry key="H2" value="24.50501450728514" />
+      <entry key="H4" value="28.73317140512005" />
+      <entry key="D1" value="33.03928797197388" />
+      <entry key="W1" value="33.86056724401948" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -37,8 +117,32 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "TestNG.AdminBookingTest.executor": "Run",
+    "TestNG.AdminLoginTest.executor": "Run",
+    "TestNG.AdminRoomTest.executor": "Run",
+    "TestNG.BookingDateTest.executor": "Run",
+    "TestNG.C:/Users/AthulDanielJV/Documents/Github/Selenium Project/hotel-booking-automation-testing/src/test/java/Regression/testng-regression-firefox.xml.executor": "Run",
+    "TestNG.C:/Users/AthulDanielJV/Documents/Github/Selenium Project/hotel-booking-automation-testing/testng-regression-chrome.xml.executor": "Run",
+    "TestNG.C:/Users/AthulDanielJV/Documents/Github/Selenium Project/hotel-booking-automation-testing/testng-regression-edge.xml.executor": "Run",
+    "TestNG.C:/Users/AthulDanielJV/Documents/Github/Selenium Project/hotel-booking-automation-testing/testng-regression-firefox.xml.executor": "Run",
+    "TestNG.C:/Users/AthulDanielJV/Documents/Github/Selenium Project/hotel-booking-automation-testing/testng-regression.xml.executor": "Run",
+    "TestNG.ContactTest.executor": "Run",
+    "TestNG.CustomerProfileUpdateTest.executor": "Run",
+    "TestNG.DoubleRoomBooking.executor": "Run",
+    "TestNG.DoubleRoomBookingTest.executor": "Run",
+    "TestNG.HomeTest.executor": "Run",
+    "TestNG.HomeTest.verifyContactNavigation.executor": "Run",
+    "TestNG.HomeTest.verifyImportantImages.executor": "Run",
+    "TestNG.HomeTest.verifyNavigation.executor": "Run",
+    "TestNG.RoomsTest.executor": "Run",
+    "TestNG.SingleRoomBooking.executor": "Run",
+    "TestNG.SingleRoomBookingTest.executor": "Run",
+    "TestNG.SuiteBookingTest.executor": "Run",
+    "TestNG.SuiteBookingTest.validTest.executor": "Run",
+    "TestNG.doubleRoomBooking.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "regression+crossbrowser",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -54,22 +158,41 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AthulDanielJV\Documents\Github\Selenium Project\hotel-booking-automation-testing" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AthulDanielJV\Documents\Github\Selenium Project\hotel-booking-automation-testing\src\test\java\Regression" />
+      <recent name="C:\Users\AthulDanielJV\Documents\Github\Selenium Project\hotel-booking-automation-testing" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tests" />
+      <recent name="pages" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="HomeTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hotel-booking-automation-testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomeTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="hotel-booking-automation-testing" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.HomeTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

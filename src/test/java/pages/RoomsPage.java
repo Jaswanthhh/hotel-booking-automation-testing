@@ -35,15 +35,27 @@ public class RoomsPage {
 
     public void clickRooms() {
 
-        wait.until(
-                ExpectedConditions.elementToBeClickable(roomsLink)
-        ).click();
+        WebDriverWait wait =
+                new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(roomsHeading)
-        );
+        WebElement roomsLink =
+                wait.until(
+                        ExpectedConditions.visibilityOfElementLocated(
+                                By.partialLinkText("Rooms")
+                        )
+                );
 
-        wait.until(d -> !getBookButtons().isEmpty());
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].scrollIntoView(true);",
+                        roomsLink
+                );
+
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].click();",
+                        roomsLink
+                );
     }
 
     private List<WebElement> getBookButtons() {
@@ -356,19 +368,22 @@ public class RoomsPage {
     // ROOM-009
     public void clickBook(int index) {
 
-        List<WebElement> buttons = getBookButtons();
+        WebElement bookButton = getBookButtons().get(index);
 
-        if (index < 0 || index >= buttons.size()) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
-            throw new IllegalStateException(
-                    "Book button not found for room index " + index
+        js.executeScript(
+                "arguments[0].scrollIntoView({block:'center'});",
+                bookButton
+        );
+
+        try {
+            bookButton.click();
+        } catch (Exception e) {
+
+            js.executeScript(
+                    "arguments[0].click();",
+                    bookButton
             );
         }
-
-        wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        buttons.get(index)
-                )
-        ).click();
-    }
-}
+    }}

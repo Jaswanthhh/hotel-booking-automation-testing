@@ -13,8 +13,8 @@
     </test>
     <test name="CustomerProfileTests">
         <classes>
-            <class name="com.hotelbooking.CustomerProfileUpdateTest"/>
-            <class name="com.hotelbooking.ContactTest"/>
+            <class name="tests.CustomerProfileUpdateTest"/>
+            <class name="tests.ContactTest"/>
         </classes>
     </test>
 </suite>

@@ -1,30 +1,30 @@
+package tests;
+
 import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class suiteBooking {
-    private WebDriver driver;
+public class SuiteBookingTest extends BaseTest {
     private WebDriverWait wait;
     private JavascriptExecutor js;
 
-    @BeforeTest
-    public void initial(){
-        driver = new EdgeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        driver.get("https://automationintesting.online/");
+    @BeforeMethod
+    public void initialize() {
+
+        wait = new WebDriverWait(
+                driver,
+                Duration.ofSeconds(10)
+        );
+
         js = (JavascriptExecutor) driver;
     }
 
@@ -77,7 +77,7 @@ public class suiteBooking {
 
             // Proceed: Return to homepage
             WebElement back = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath(".//a[normalize-space()='Return home']")));
+                    By.partialLinkText("Home")));
             js.executeScript("arguments[0].click();", back);
 
         } else {
@@ -546,13 +546,6 @@ public class suiteBooking {
         } else {
             // 3. Fallback if neither container renders
             Assert.fail("Neither booking confirmation nor validation error alert was displayed.");
-        }
-    }
-
-    @AfterTest
-    public void quit(){
-        if (driver != null){
-            driver.quit();
         }
     }
 }

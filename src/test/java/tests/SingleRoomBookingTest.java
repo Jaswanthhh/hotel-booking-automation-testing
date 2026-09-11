@@ -1,37 +1,37 @@
+package tests;
+
 import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.WebElement;;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class doubleRoomBooking {
-    private WebDriver driver;
+public class SingleRoomBookingTest extends BaseTest {
     private WebDriverWait wait;
     private JavascriptExecutor js;
 
-    @BeforeTest
-    public void initial(){
-        driver = new EdgeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        driver.get("https://automationintesting.online/");
+    @BeforeMethod
+    public void initial() {
+        wait = new WebDriverWait(
+                driver,
+                Duration.ofSeconds(10)
+        );
+
         js = (JavascriptExecutor) driver;
     }
 
     @Test(priority = 1)
     public void validTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -42,7 +42,7 @@ public class doubleRoomBooking {
         ));
         // 2. Select two available future dates via drag-and-drop
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(days.get(15), days.get(17)).perform();
+        actions.dragAndDrop(days.get(12), days.get(14)).perform();
 
         WebElement reserveNow = wait.until(ExpectedConditions.elementToBeClickable(
                 By.id("doReservation")));
@@ -90,7 +90,7 @@ public class doubleRoomBooking {
     @Test(priority = 2)
     public void missingFirstNameTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -167,7 +167,7 @@ public class doubleRoomBooking {
     @Test(priority = 3)
     public void missingLastNameTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -244,7 +244,7 @@ public class doubleRoomBooking {
     @Test(priority = 4)
     public void missingEmailTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -321,7 +321,7 @@ public class doubleRoomBooking {
     @Test(priority = 5)
     public void invalidEmailTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -398,7 +398,7 @@ public class doubleRoomBooking {
     @Test(priority = 6)
     public void missingPhoneTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -475,7 +475,7 @@ public class doubleRoomBooking {
     @Test(priority = 7)
     public void invalidPhoneTest(){
         WebElement book = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector("a.btn-primary[href*='/reservation/2']")
+                By.cssSelector("a.btn-primary[href*='/reservation/1']")
         ));
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", book);
         js.executeScript("arguments[0].click();", book);
@@ -546,13 +546,6 @@ public class doubleRoomBooking {
         } else {
             // 3. Fallback if neither container renders
             Assert.fail("Neither booking confirmation nor validation error alert was displayed.");
-        }
-    }
-
-    @AfterTest
-    public void quit(){
-        if (driver != null){
-            driver.quit();
         }
     }
 }
